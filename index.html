@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hangman</title>
+
+  <!-- Bootstrap and project css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- Link javascript -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+
+<body onload="loadFunction()">
+
+  <div class="container">
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-md-1" >      
+        <!-- Nothing Here -->
+      </div>
+      <div class="col-md-11" >
+        <div class="row"> 
+          <h1>Press Any Letter Key To Begin</h1>
+        </div>
+        <div class="row">
+          <h2>Games Won: <span id="gamesWon"></span>  </h2>
+        </div>
+        <div class="row">
+          <h2>Current Word: <span id="currentWord"></span>  </h2>
+        </div>
+        <div class="row">
+          <h2>Letters Selected: <span id="lettersSelected"></span>  </h2>
+        </div>
+        <div class="row">
+            <h2 class="guessHeader">Guesses<span id="guesses"></span> </h2>
+        </div>
+       
+      </div>  <!-- End of Col 2 -->
+    
+    </div>   <!-- row 1 --> 
+
+</body>
+</html>

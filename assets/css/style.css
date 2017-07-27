@@ -1,0 +1,31 @@
+
+body {
+    background-image: url("../images/ahshm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    color: white;
+}
+
+span {
+padding-left: 20px;
+white-space: pre;
+
+}
+#gamesWon {
+
+  margin-left: 45px;
+}
+#currentWord {
+
+ margin-left: 40px; 
+}
+
+.guessHeader {
+  padding: 50px 0px 50px 360px;
+  margin: 0 auto;
+}
+#guesses {
+display: block;
+margin-top: 20px;
+padding-left: 45px;
