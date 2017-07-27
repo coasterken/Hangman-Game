@@ -96,12 +96,12 @@ document.onkeyup = function(event) {
   //could use indexof here - try this later
   if (guessesRemaining === 0) { 
       loadFunction();
-  } else if (randomAHS.replace(/\s/g, '') === randomUnderscore.replace(/\s/g, ''))  {
+  } else if (randomAHS.replace(/\s/g, '') === randomUnderscore.replace(/\s/g, '')) {
       totalWins = totalWins + 1;
       document.getElementById("gamesWon").innerHTML = totalWins; 
       loadFunction();
   }
 
-}
+}   //  End of keyup function
 
 
