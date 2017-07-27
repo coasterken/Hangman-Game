@@ -60,16 +60,16 @@ document.onkeyup = function(event) {
     //console.log("not a good key")
     return;
   }
-
+  var lcKey = event.key.toLowerCase();
   // is the pressed key in the selected AHS value?  Then we have a match
   // if key was already selected (in randomUnderscore), ignore
-  if (randomAHS.match(event.key)) {
+  if (randomAHS.match(lcKey)) {
 
     // has the pressed key already been selected?  If so, get out
-    if (goodKeys.match(event.key)) {
+    if (goodKeys.match(lcKey)) {
         return;
     } else {
-        goodKeys = goodKeys + event.key;
+        goodKeys = goodKeys + lcKey;
     }
    
     // set up a new regexp with all selected input keys
@@ -81,10 +81,10 @@ document.onkeyup = function(event) {
   } else {
 
     // has the pressed key already been selected?  if not, add new key to field
-    if (inputKeys.match(event.key)) {
+    if (inputKeys.match(lcKey)) {
        return;
     } else {
-       inputKeys = inputKeys + event.key;
+       inputKeys = inputKeys + lcKey;
        guessesRemaining = guessesRemaining - 1;
        document.getElementById("lettersSelected").innerHTML = inputKeys.split('').join(' '); 
        document.getElementById("guesses").innerHTML = guessesRemaining; 
@@ -93,6 +93,7 @@ document.onkeyup = function(event) {
 
   //console.log( randomAHS.replace(/\s/g, '') + " " + randomUnderscore.replace(/\s/g, '') )
   // are we done?  0 guesses remain or we have a match
+  //could use indexof here - try this later
   if (guessesRemaining === 0) { 
       loadFunction();
   } else if (randomAHS.replace(/\s/g, '') === randomUnderscore.replace(/\s/g, ''))  {
